@@ -37,6 +37,6 @@ server.use(errorHandler);
 const currentPort = config.port;
 const liveBackendURL = config.livePort
 
-server.listen(currentPort, () => {
+server.listen(liveBackendURL, () => {
     console.log(`listening on ${liveBackendURL}`)
 })
