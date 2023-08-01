@@ -103,7 +103,7 @@ export default class PrismaUserServices {
                 }
             }
         });
-        const followedUsersPosts = allFollowedUsersIDs.flatMap((user) => user.posts);
+        const followedUsersPosts = allFollowedUsersIDs.flatMap((user:any) => user.posts);
         console.log(followedUsersPosts)
         return followedUsersPosts;
     }
