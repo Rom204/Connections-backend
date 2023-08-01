@@ -35,6 +35,7 @@ server.use(errorHandler);
 
 // uploading server with matching PORT 
 const currentPort = config.port;
+const liveBackendURL = config.livePort
 
 server.listen(currentPort, () => {
     console.log(`listening on http://localhost:${currentPort}`)
