@@ -1,6 +1,5 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
-// import { env } from '@prisma/client/runtime';
 
 datasource db {
   provider = "mongodb"
