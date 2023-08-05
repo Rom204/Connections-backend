@@ -38,8 +38,9 @@ server.use(errorHandler);
 
 // uploading server with matching PORT 
 const currentPort = config.port;
-const liveBackendURL = config.livePort
+const liveBackendURL = config.liveBackendPort
+console.log(liveBackendURL);
 
-server.listen(liveBackendURL, () => {
+server.listen("https://connections-backend.onrender.com", () => {
     console.log(`listening on ${liveBackendURL}`)
 })
