@@ -62,7 +62,7 @@ export default class PrismaPostServices {
             }
         }
         return await this.prisma.like.findMany({
-            where : {
+            where: {
                 postId: postID,
             }
         })
@@ -81,6 +81,19 @@ export default class PrismaPostServices {
             console.log(error)
             throw error
         }
+        return await this.prisma.comment.findMany({
+            where: {
+                postId: postID,
+            },
+            include: {
+                user: {
+                    select: {
+                        id: true,
+                        username: true
+                    }
+                }
+            }
+        })
     }
     // ___________________________________________________________________________________
     //read
