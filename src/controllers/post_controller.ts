@@ -38,7 +38,7 @@ const handleLike = async (postID: string, likeAuthor: string) => {
 }
 
 const createComment = async (postID: string, commentAuthor: string, comment: string) => {
-    await service.createComment(postID, commentAuthor, comment);
+    return await service.createComment(postID, commentAuthor, comment);
 }
 
 const cloudImageUpload = async (image: any) => {
