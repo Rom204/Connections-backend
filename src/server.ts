@@ -41,6 +41,6 @@ const currentPort = config.port;
 const liveBackendURL = config.liveBackendPort
 console.log(liveBackendURL);
 
-server.listen("https://connections-backend.onrender.com", () => {
+server.listen(currentPort, () => {
     console.log(`listening on ${liveBackendURL}`)
 })
