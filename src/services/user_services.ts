@@ -89,7 +89,12 @@ export default class PrismaUserServices {
                         comments: {
                             select: {
                                 id: true,
-                                user: true,
+                                user: {
+                                    select: {
+                                        id: true,
+                                        username: true
+                                    }
+                                },
                                 comment: true
                             }
                         },
